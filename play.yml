@@ -1,0 +1,19 @@
+---
+- hosts: all
+  vars:
+    locale: en_US.utf8
+    timezone: Asia/Manila
+
+  tasks:
+  - name: apt-update
+    shell: apt-get update 
+    become: true
+
+  - name: this works
+    shell: mkdir julius
+    become: true
+
+
+
+
+
