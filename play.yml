@@ -5,15 +5,14 @@
     timezone: Asia/Manila
 
   tasks:
-  - name: apt-update
-    shell: apt-get update 
+  - name: Install Nginx
+    shell: apt-get install -y nginx 
     become: true
 
-  - name: this works
-    shell: mkdir julius
-    become: true
-
-
+  - name: Start Nginx
+    shell: /etc/init.d/nginx start
+   
+  
 
 
 
